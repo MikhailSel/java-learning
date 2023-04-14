@@ -11,7 +11,8 @@ public class Lesson2 {
         };
         //printDoubleArray(doubleArray);
         //task4();
-        task5();
+        //task5();
+        task6();
     }
 
     /**
@@ -108,5 +109,13 @@ public class Lesson2 {
 
     public static void task6() {
         int[] arr = new int[]{2, 2, 2, 6};
+        int rightSum = 0;
+        int leftSum = 0;
+        for (int i = 0, j = 4; i < arr.length && j < arr.length; i++, j--) {
+            rightSum += arr[i];
+            leftSum += arr[j];
+        }
+        System.out.println(rightSum);
+        System.out.println(leftSum);
     }
 }
