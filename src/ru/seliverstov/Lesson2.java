@@ -12,7 +12,10 @@ public class Lesson2 {
         //printDoubleArray(doubleArray);
         //task4();
         //task5();
-        task6();
+        //task6();
+
+        boolean result = task7(1, new int[]{1, 2, 5});
+        System.out.println(result);
     }
 
     /**
@@ -118,4 +121,25 @@ public class Lesson2 {
         System.out.println(rightSum);
         System.out.println(leftSum);
     }
+
+    /**
+     * Написать метод, который возвращает true,
+     * если в массиве есть 2 элемента, сумма которых = target
+     */
+
+    public static boolean task7(int target, int[] arr) {
+        // 3,3,3,2,1 target 3
+        // 1,2,5,    target 7
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                int sum = arr[i] + arr[j];
+                if (sum == target) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
+
+
