@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class Lesson3 {
     public static void main(String[] args) {
         task1();
+
+        //int result = task2("aabbcd","ab");
+        //System.out.println(result);
+
     }
 
     /**
@@ -37,6 +41,26 @@ public class Lesson3 {
             System.out.println("Повторить игру еще раз, 0 - false, 1 - true");
             ask = sc.nextInt();
         } while (ask == 1);
+    }
+
+    /**
+     * Даны две строки строчных латинских символов: строка J и строка S.
+     * Символы, входящие в строку J, — «драгоценности»,
+     * входящие в строку S — «камни». Нужно определить, какое количество символов из S одновременно
+     * являются «драгоценностями». Проще говоря, нужно проверить, какое количество символов из S входит в J.
+     */
+    // J = "aabbcd";
+    // S = "ab"
+    public static int task2(String J, String S) {
+        int result = 0;
+        for (int i = 0; i < S.length(); i++) {
+            for (int j = 0; j < J.length(); j++) {
+                if (S.charAt(i) == J.charAt(j)) {
+                    result = result + 1;
+                }
+            }
+        }
+        return result;
     }
 }
 
