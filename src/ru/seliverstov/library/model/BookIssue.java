@@ -70,13 +70,13 @@ public class BookIssue {
     @Override
     public String toString() {
         return "BookIssue{" +
-                "id=" + id +
-                ", bookId=" + bookId +
-                ", userId=" + userId +
-                ", from=" + from +
-                ", to=" + to +
-                ", issueFact=" + issueFact +
-                '}';
+            "id=" + id +
+            ", bookId=" + bookId +
+            ", userId=" + userId +
+            ", from=" + from +
+            ", to=" + to +
+            ", issueFact=" + issueFact +
+            '}';
     }
 }
 

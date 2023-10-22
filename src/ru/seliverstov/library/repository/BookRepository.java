@@ -37,7 +37,6 @@ public class BookRepository {
         return null;
     }
 
-
     public List<Book> findByAuthor(String author) {
         List<Book> result = new ArrayList<>();
 

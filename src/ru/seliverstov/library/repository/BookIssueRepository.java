@@ -1,8 +1,6 @@
 package ru.seliverstov.library.repository;
 
-import ru.seliverstov.library.model.Book;
 import ru.seliverstov.library.model.BookIssue;
-import ru.seliverstov.library.model.User;
 
 import java.util.ArrayList;
 import java.util.List;

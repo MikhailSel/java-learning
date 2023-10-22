@@ -51,10 +51,10 @@ public class Penalty {
     @Override
     public String toString() {
         return "Penalty{" +
-                "id=" + id +
-                ", bookIssueId=" + bookIssueId +
-                ", sum=" + sum +
-                ", status='" + status + '\'' +
-                '}';
+            "id=" + id +
+            ", bookIssueId=" + bookIssueId +
+            ", sum=" + sum +
+            ", status='" + status + '\'' +
+            '}';
     }
 }

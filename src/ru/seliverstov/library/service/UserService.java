@@ -1,7 +1,6 @@
 package ru.seliverstov.library.service;
 
 import ru.seliverstov.library.model.User;
-import ru.seliverstov.library.repository.BookRepository;
 import ru.seliverstov.library.repository.UserRepository;
 
 import java.util.List;

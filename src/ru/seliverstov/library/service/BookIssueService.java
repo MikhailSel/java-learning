@@ -23,7 +23,6 @@ public class BookIssueService {
         this.bookRepository = bookRepository;
     }
 
-
     public BookIssue add(Long userId, Long bookId) {
         Book bookResult = bookRepository.findById(bookId);
         if (bookResult == null) {
@@ -35,7 +34,7 @@ public class BookIssueService {
             System.out.println("Пользователь не зарегистрирован");
             return null;
         }
-        BookIssue bookIssue = new BookIssue(bookId,userId, LocalDateTime.now(), LocalDateTime.now().plusMonths(1));
+        BookIssue bookIssue = new BookIssue(bookId, userId, LocalDateTime.now(), LocalDateTime.now().plusMonths(1));
         bookIssueRepository.add(bookIssue);
         System.out.println(bookIssue);
         return bookIssue;
@@ -46,7 +45,7 @@ public class BookIssueService {
         BookIssue bookIssueResult = bookIssueRepository.findById(bookIssueId);
         bookIssueResult.setIssueFact(LocalDateTime.now());
         if (bookIssueResult.getTo().isBefore(bookIssueResult.getIssueFact())) {
-            return new Penalty(bookIssueId, BigDecimal.valueOf(1000),"Не оплачено" );
+            return new Penalty(bookIssueId, BigDecimal.valueOf(1000), "Не оплачено");
 
         }
         return null;

@@ -1,14 +1,12 @@
 package ru.seliverstov.library.service;
 
-import ru.seliverstov.library.repository.BookRepository;
-
 import ru.seliverstov.library.model.Book;
+import ru.seliverstov.library.repository.BookRepository;
 
 import java.util.List;
 
 public class BookService {
     private final BookRepository bookRepository;
-
 
     public BookService(final BookRepository bookRepository1) {
         this.bookRepository = bookRepository1;
@@ -21,7 +19,6 @@ public class BookService {
         }
 
         throw new RuntimeException("Книга уже зарегистрирована в библиотеке");
-
     }
 
     public boolean removeById(final long bookId) {
@@ -32,7 +29,6 @@ public class BookService {
         System.out.println("Книга не может быть удалена, так как она не зарегистрирована");
         return false;
     }
-
 
     public List<Book> getBookList() {
         return bookRepository.getBookList();
