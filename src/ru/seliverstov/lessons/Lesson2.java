@@ -1,4 +1,4 @@
-package ru.seliverstov;
+package ru.seliverstov.lessons;
 
 import java.util.Arrays;
 

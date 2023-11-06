@@ -1,4 +1,4 @@
-package ru.seliverstov;
+package ru.seliverstov.lessons;
 
 public class Lesson1 {
     public static void main(String[] args) {
